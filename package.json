@@ -6,6 +6,7 @@
   "repository": "https://github.com/antaehyeon/graphql.git",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
     "graphql-yoga": "^1.17.4",
     "node-fetch": "^2.3.0"
   },

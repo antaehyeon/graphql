@@ -1,15 +1,28 @@
-# 사용자가 무엇을 할지에 대해서 정의
-# 1. 데이터베이스로부터 정보를 얻는 (Query)
-
 type Movie {
   id: Int!
   title: String!
-  rating: Float!
-  summary: String!
-  language: String!
-  medium_cover_image: String!
+  rating: Float
+  description_intro: String
+  language: String
+  medium_cover_image: String
+  genres: [String]
+}
+type Price {
+  pnu: Int!
+  stdrYear: Int!
+  stdrMt: Int!
+  ldCode: Int!
+  ldCodeNm: String!
+  aphusSeCodeNm: String!
+  aphusNm: String!
+  prvuseAr: Float!
+  pblntfPc: Int!
+  lastUpdtDt: Float!
 }
 
 type Query {
   movies(limit: Int, rating: Float): [Movie]!
+  movie(id: Int!): Movie
+  suggestions(id: Int!): [Movie]!
+  prices(pnu: Int!, stdrYear: Int!): [Price]!
 }
